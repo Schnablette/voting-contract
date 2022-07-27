@@ -10,10 +10,10 @@ const hre = require("hardhat");
 async function main() {
   const proposals = [
     ethers.utils.formatBytes32String("I wanna be a starship ranger"),
-    ethers.utils.formatBytes32String("I wanna have the things they got"),
+    ethers.utils.formatBytes32String("Wanna have the things they got"),
   ];
 
-  const Ballot = await hre.ethers.getContractFactory("Ballot");
+  const Ballot = await hre.ethers.getContractFactory("ModifiedBallot");
   const ballot = await Ballot.deploy(proposals);
 
   await ballot.deployed();
