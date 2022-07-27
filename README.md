@@ -1,6 +1,10 @@
-# Sample Hardhat Project
+# Voting Contract Manipulation
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+For this project, I took the standard voting contract example from solidity's website and modified it to do the following:
+
+1. Remove delegates from the contract completely
+2. Add a way for the chairperson to close the ballot when they wish. No one should be able to vote after it is closed
+3. Make it so no one knows the winner until the ballot is closed
 
 Try running some of the following tasks:
 
