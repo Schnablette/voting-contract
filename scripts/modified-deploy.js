@@ -8,9 +8,11 @@
 const hre = require("hardhat");
 
 async function main() {
+  const [deployer, addr1, addr2, addr3, addr4, addr5,] = await hre.ethers.getSigners()
+
   const proposals = [
-    ethers.utils.formatBytes32String("I wanna be a starship ranger"),
-    ethers.utils.formatBytes32String("Wanna have the things they got"),
+    ethers.utils.formatBytes32String("Become a starship ranger"),
+    ethers.utils.formatBytes32String("Don't become a starship ranger"),
   ];
 
   const Ballot = await hre.ethers.getContractFactory("ModifiedBallot");
